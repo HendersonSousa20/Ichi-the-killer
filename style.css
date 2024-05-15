@@ -48,7 +48,7 @@ p {
 }
 
 .images img:hover {
-    content: url(/src/Kakihara_Masao-removebg-preview.png);
+    content: url(./src/Kakihara_Masao-removebg-preview.png);
     transform: scale(1.1);
     transition: 2s ease;
     filter: drop-shadow(0 -6mm 4mm rgb(0, 0, 0));
