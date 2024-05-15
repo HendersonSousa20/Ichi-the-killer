@@ -1,108 +1,105 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background: 
-    repeating-radial-gradient(#ff0000 0 0.0001%,#ff0000 0 0.0002%) 50% 0/2500px 2500px,
-    repeating-conic-gradient(#000000 0 0.0001%,#ff0000 0 0.0002%) 60% 60%/2500px 2500px;
-  background-blend-mode: difference;
-  animation: b .2s infinite alternate;
-  color: rgb(255, 255, 255);
+        repeating-radial-gradient(#ff0000 0 0.0001%, #ff0000 0 0.0002%) 50% 0/2500px 2500px,
+        repeating-conic-gradient(#000000 0 0.0001%, #ff0000 0 0.0002%) 60% 60%/2500px 2500px;
+    background-blend-mode: difference;
+    animation: b .2s infinite alternate;
+    color: rgb(255, 255, 255);
     font-family: 'Abhaya Libre';
     height: 100vh;
 }
- .conteiner{
+
+.container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    
     margin-top: 100px;
- }
+}
 
-.conteudo{
+.content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-right: 40px;
     width: 600px;
-     
 }
 
-.imagens img{
+.images img {
     height: 500px;
     width: 350px;
 }
 
-p{
+p {
     margin-top: 10px;
 }
 
-#logo{
-    filter: saturate(00) sepia(300);
+#logo {
+    filter: saturate(0) sepia(300);
     height: 50px;
     width: 150px;
     position: relative;
     bottom: 30%;
 }
 
- .imagens img:hover{
- content: url(/src/Kakihara_Masao-removebg-preview.png);
+.images img:hover {
+    content: url(/src/Kakihara_Masao-removebg-preview.png);
     transform: scale(1.1);
-  transition: 2s ease;
-  filter: drop-shadow(0 -6mm 4mm rgb(0, 0, 0));
+    transition: 2s ease;
+    filter: drop-shadow(0 -6mm 4mm rgb(0, 0, 0));
 }
 
-button{
-    font-family: 'Abhaya Libre';
+button {
     margin-top: 50px;
     background: linear-gradient(107.2deg, rgb(150, 15, 15) 10.6%, rgb(247, 0, 0) 91.1%);
-    width: 100PX;
-    height: 30PX;
+    width: 100px;
+    height: 30px;
     border: none;
     border-radius: 3px;
+    transition: transform 2s, filter 2s;
 }
 
-button:hover{
+button:hover {
     transform: scale(1.1);
-    transition: 2s;
     filter: drop-shadow(0 0 0.75rem crimson);
 }
 
-span{
+span {
     color: rgb(145, 0, 0);
     text-decoration: line-through;
     text-decoration-style: solid;
 }
 
-
-  @keyframes blink {
+@keyframes blink {
     0% { opacity: 1; }
     50% { opacity: 0; }
     100% { opacity: 1; }
-  }
-  
-  .piscando {
+}
+
+.piscando {
     animation: blink 1s infinite;
     color: rgb(0, 0, 0); /* Mudando a cor do texto para uma cor de sangue */
-  }
+}
 
-@keyframes b{
-    100% {background-position: 50% 0, 60% 50%}
-  }
+@keyframes b {
+    100% { background-position: 50% 0, 60% 50%; }
+}
 
-  @media  (max-width: 600px) {
-
+@media (max-width: 600px) {
     body {
         text-align: center;
     }
-    .conteiner {
+    
+    .container {
         flex-wrap: wrap;
     }
     
-    .conteudo{
+    .content {
         text-align: center;
     }
 
@@ -111,25 +108,22 @@ span{
         top: 2%;
         left: 50%;
         transform: translate(-50%, -50%);
-        
     }
 
     button:hover {
         position: relative;
         top: 2%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        scale: 1.1;
-        
+        transform: translate(-50%, -50%) scale(1.1);
     }
 
-    #logo{
+    #logo {
         position: absolute;
         top: 2%;
         left: 30%;
     }
 
-    .imagens img {
+    .images img {
         margin-top: 50px;
     }
-} 
+}
